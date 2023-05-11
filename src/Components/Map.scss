@@ -1,0 +1,82 @@
+.Map{
+    margin-top: 5rem;
+    // height: 100vh;
+    height: 80rem;
+    width: 100%;
+
+    position: relative;
+    z-index: 40;
+
+    // position: relative;
+    
+    background-image: url('/assets/map-1.jpg');
+    // background-size: 100% 100%;
+    background-size: cover;
+    
+    .bg_container{
+        .bg_strip{
+            border-right: 2px solid rgba(50, 50, 50, 0.5);
+        }
+    }
+    
+    .text{
+        height: 100%;
+        width: 100%;
+        padding: 0 5rem;
+        
+        background-color: rgba(0, 0, 0, 0.85);
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+        font-family: 'Kameron', serif;
+
+        .title_decoration_container{
+            .title_decoration{
+                height: 5rem;
+            }
+        }
+
+        h2{
+            font-size: 15rem;
+            color: #fff;            
+            letter-spacing: 0.5rem;
+        }
+        p{
+            color: #fff;
+            font-size: 2rem;
+            text-align: center;
+        }
+    }
+}
+@media (max-width: 780px) {
+    .Map .text{
+        h2{
+            font-size: 10rem;
+        }
+    }
+}
+
+@media (max-width: 570px) {
+    .Map {
+        height: 60rem;
+        .text{
+            h2{
+                font-size: 7rem;
+            }
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    .Map .text{
+        h2{
+            font-size: 5rem;
+        }
+        p{
+            font-size: 1.8rem;
+        }
+    }
+}

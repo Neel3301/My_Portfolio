@@ -1,0 +1,83 @@
+.OurTeam::-webkit-scrollbar{
+    display: none;
+}
+.OurTeam{
+    height: 100vh;
+    width: 100%;
+
+    overflow-x: scroll;
+    
+    position: relative;
+    z-index: 10;
+    // background-color: #e5e5e5;
+    
+
+    .ourTeamContainer{
+        height: 100%;
+        width: 380rem;
+
+        display: flex;
+        gap: 2rem;
+
+        overflow: hidden;
+
+
+        .slab:nth-child(1){
+            padding-top: 10rem;
+        }
+        .slab:nth-child(even){
+            // padding-top: 4rem;
+            // padding-bottom: 10rem;
+        }
+        .slab{
+            padding: 0 5rem;
+            padding-top: 4rem;
+            height: 100%;
+            width: 45rem;
+            // background-color: rgba(0,0,0,0.6);
+            
+            display: flex;
+            justify-content: flex-start;
+            align-items: flex-start;
+            flex-direction: column;
+            gap: 2rem;
+            
+
+            .title{
+                width: 100%;
+                position: relative;
+
+                h2{
+                    font-size: 5rem;
+                    font-family: 'Bebas Neue', cursive;
+                    font-weight: 400;
+                }
+            }
+
+            .title::before{
+                content: 'Since 2019';
+                position: absolute;
+                z-index: -1;
+
+                height: 100%;
+                width: 100%;
+
+                top: -7rem;
+                font-size: 9rem;
+                font-family: 'Bebas Neue', cursive;
+                // text-align: center;
+                color: #e5e5e5;
+            }
+
+            p{
+                font-size: 1.6rem;
+                text-align: justify;
+                text-transform: capitalize;
+                font-family: 'Rajdhani', sans-serif; 
+                font-weight: 600;
+            }
+
+        }
+    }
+
+}

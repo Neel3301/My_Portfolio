@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Braah+One&family=Inter&family=Kameron&family=Poppins&family=Rajdhani&display=swap');
+/* 
+
+font-family: 'Bebas Neue', cursive;
+font-family: 'Inter', sans-serif;
+font-family: 'Kameron', serif;
+font-family: 'Poppins', sans-serif;
+font-family: 'Rajdhani', sans-serif; 
+font-family: 'Braah One', sans-serif;
+
+*/
+
+/* ==============================================================================================================
+                                        Global Style
+============================================================================================================== */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+html{
+    font-size: 62.5%;
+}
+body{
+    height: auto;
+    width: 100%;
+    min-width: 350px;
+    position: relative;
+}
+a{
+    text-decoration: none;
+    color: #000;
+}
+li{
+    list-style: none;
+}
+
+::-webkit-scrollbar {
+    width: 1.5rem;
+}
+::-webkit-scrollbar-track {
+    background: #6c757d;
+}
+::-webkit-scrollbar-thumb {
+    background: #212529;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #495057;
+}
+/* ==============================================================================================================
+                                        Strip Background
+============================================================================================================== */
+.bg_container{
+    height: 100%;
+    width: 100%;
+
+    position: absolute;
+    z-index: 2;
+
+    .bg_strip{
+        height: 100%;
+        width: 8rem;
+    
+        border-right: 2px solid rgba(0, 0, 0, 0.08);
+        // border-right: 2px solid #fff;
+        
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    .bg_strip:nth-child(2){
+        left: 15%;
+    }
+    .bg_strip:nth-child(3){
+        left: 45%;
+    }
+    .bg_strip:nth-child(4){
+        left: 55%;
+    }
+    .bg_strip:nth-child(5){
+        left: 90%;
+    }
+}
+
+@media (max-width: 950px) {
+    .bg_container{
+
+        .bg_strip:nth-child(5){
+            left: 80%;
+        }
+
+    }
+}
+
+
+@media (max-width: 400px) {
+    .bg_container{
+
+        .bg_strip:nth-child(5){
+            display: none;
+        }
+
+    }
+}
+
+/* ==============================================================================================================
+                                        Decoration
+============================================================================================================== */
+
+.title_decoration_container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+
+    .title_decoration{
+        height: 3rem;
+        width: 1rem;
+        border-radius: 1rem;
+    }
+    .title_decoration:nth-child(1){
+        background-color: #ff595e;
+    }
+    .title_decoration:nth-child(2){
+        background-color: #7fc8f8;
+    }
+    .title_decoration:nth-child(3){
+        background-color: #ff6392;
+    }
+    .title_decoration:nth-child(4){
+        background-color: #ffca3a;
+    }
+    .title_decoration:nth-child(5){
+        background-color: #8ac926;
+    }
+    .title_decoration:nth-child(6){
+        background-color: #1982c4;
+    }
+    .title_decoration:nth-child(7){
+        background-color: #6a4c93;
+    } 
+    .title_decoration:nth-child(8){
+        background-color: #ff595e;
+    }
+    .title_decoration:nth-child(9){
+        background-color: #7fc8f8;
+    }
+    .title_decoration:nth-child(10){
+        background-color: #ff6392;
+    }   
+    .title_decoration:nth-child(11){
+        background-color: #ffca3a;
+    }
+    .title_decoration:nth-child(12){
+        background-color: #8ac926;
+    }
+    .title_decoration:nth-child(13){
+        background-color: #1982c4;
+    }
+}
