@@ -1,0 +1,139 @@
+.Skills{
+    // height: 100vh;
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    // background-color: aqua;
+
+    .left{    
+        width: 50rem;
+        // background-color: red;  
+
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 2rem;
+
+        padding: 5rem;
+
+        h3{
+            font-size: 5rem;
+            font-family: 'Inter', sans-serif;
+            text-transform: uppercase;
+        }
+
+        .btns{
+            display: flex;
+            gap: 2rem;
+            z-index: 10;
+            button{
+                cursor: pointer;
+                // height: 4rem;
+                // width: 7rem;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 0.8rem 2rem;
+                background-color: #000;
+                color: #fff;
+                font-size: 2.5rem;
+            }
+        }
+
+    }
+    .right::-webkit-scrollbar{
+        display: none;
+    }
+    .right{
+        // background-color: antiquewhite;
+        width: calc(100% - 50rem);
+
+        position: relative;
+        z-index: 10;
+
+        overflow: scroll;
+        scroll-behavior: smooth;
+
+        .cardContainer{
+            height: 100%;
+            width: 750rem;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 2rem;
+
+            .card{
+                height: 60rem;
+                width: 60rem;
+                // background-color: aqua;
+                transition: all 0.2s linear;
+                
+                cursor: pointer;
+
+                display: flex;
+                justify-content: center;
+                align-items: flex-start;
+                flex-direction: column;
+                gap: 2rem;
+                padding: 2rem 5rem;
+
+                h2{
+                    font-size: 8rem;
+                    font-family: 'Braah One', sans-serif;
+                    font-weight: bolder;
+                    color: #dedede;
+                }
+                h4{
+                    font-size: 3rem;
+                    font-family: 'Inter', sans-serif;
+                }
+                p{
+                    font-size: 1.5rem;
+                    font-family: 'Inter', sans-serif;
+                }
+            }
+            .card.active{
+                transform: scale(1.02);
+                h2{
+                    color: #000;
+                }
+            }
+            
+
+        }
+
+    }
+
+}
+
+@media (max-width: 770px) {
+    .Skills{
+        flex-direction: column;
+        height: 110rem;
+        // background-color: brown;
+
+        .left{
+            height: 40rem;
+            // background-color: aqua;
+            width: 100%;
+        }
+        .right{
+            height: 70rem;
+            // background-color: aquamarine;
+            width: 100%;
+        }
+    }
+}
+
+@media (max-width: 470px) {
+    .Skills .left{
+        h3{
+            font-size: 4rem;
+        }
+    }
+}

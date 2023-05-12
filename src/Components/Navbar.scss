@@ -1,0 +1,317 @@
+/* ==============================================================================================================
+                                        Navbar
+============================================================================================================== */
+nav{
+    height: 10rem;
+    width: 100%;
+    overflow: hidden;
+    transition: all 0.5s linear;
+
+    font-family: 'Rajdhani', sans-serif; 
+
+    display: flex;
+    flex-direction: column;
+/* ==============================================================================================================
+                                        Visible Navbar
+============================================================================================================== */    
+    .visible_navbar{        
+        height: 10rem;
+        width: 100%;
+
+        display:flex;
+        justify-content: space-between;
+        align-items:center;
+        padding: 0 10rem;
+
+        position: relative;
+/* ==============================================================================================================
+                                        Toggle Btn
+============================================================================================================== */
+        .nav_toggle_btn{
+            height: 100%;
+            width: 5rem;
+            background-color: #000;
+        
+            position: relative;
+        
+            display:flex;
+            justify-content:center;
+            align-items:center;
+        
+            cursor: pointer;
+            z-index: 10;
+        }
+        .nav_toggle_btn::before{
+            content: '';
+            position: absolute;
+        
+            width: 3.5rem;
+            height: 4px;
+            background-color: #fff; 
+            transform: translateY(-10px);   
+            box-shadow: 0 10px #fff;
+        
+            transition: all 0.5s linear;
+        }
+        .nav_toggle_btn::after{
+            content: '';
+            position: absolute;
+        
+            width: 3.5rem;
+            height: 4px;
+            background-color: #fff; 
+            transform: translateY(10px); 
+        
+            transition: all 0.5s linear;
+        }
+/* ==============================================================================================================
+                                        Nav Title
+============================================================================================================== */
+        .nav_title{
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            flex-direction: column;
+
+            h1{
+                font-size: 4rem;
+                letter-spacing: 0.2rem;
+            }
+        }
+/* ==============================================================================================================
+                                        Nav Else Part
+============================================================================================================== */   
+        .nav_else_part{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 2rem;
+    
+            .slab{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 1rem;
+                z-index: 10;
+                font-size: 2.5rem;
+                
+                span{
+                    font-size: 2rem;
+                    cursor: pointer;
+                }
+                span:hover{
+                    font-weight: bolder;
+                }
+            }
+        }
+    }
+/* ==============================================================================================================
+                                        Hidden Nav
+============================================================================================================== */
+    .hidden_nav{
+        height: 0rem;
+        width: 100%;
+        transition: all 0.5s linear;
+        overflow: hidden;
+
+        display: flex;
+        justify-content: center;
+        align-items: center; 
+
+        .hidden_nav_container{
+            height: 100%;
+            width: 100%;
+            padding:  10rem;
+
+            gap: 8rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+/* ==============================================================================================================
+                                        Hidden Nav Left
+============================================================================================================== */
+            .left{
+                display: flex;
+                justify-content: center;
+                align-items: flex-start;
+                flex-direction: column;
+                gap: 2rem;
+        
+                a{
+                    font-size: 3rem;
+                    z-index: 10;
+                    cursor: pointer;
+                    white-space: nowrap;
+                }
+
+                .nav_op.active{
+                    color: #ffca3a;  
+                    font-weight: bolder;  
+                }
+            }
+/* ==============================================================================================================
+                                        Hidden Nav Right
+============================================================================================================== */
+            .right{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+
+                .nav_op_data{
+                    display: none;
+                }
+
+                .nav_op_data.active{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    flex-direction: column;
+                    gap: 2rem;
+                }
+    
+                p{
+                    // text-indent: 8rem;
+                    font-size: 2.5rem;
+                    white-space: normal;  
+                    text-transform: capitalize;                  
+                }
+            }
+        }
+
+    }
+    
+}
+/* ==============================================================================================================
+                                        Nav Active
+============================================================================================================== */
+nav.active{
+    height: 75rem;
+    max-height: 100vh;
+    min-height: 60rem;
+
+    // border-bottom: 5px solid #000;
+
+    transition: all 0.5s linear;
+    
+    .nav_toggle_btn::before{
+        transform: translateY(0px) rotate(-45deg);
+        box-shadow: none;
+    }
+
+    .nav_toggle_btn::after{
+        transform: translateY(0px) rotate(45deg);
+    }
+
+    .hidden_nav{
+        height: 100%;  
+        transition: all 0.5s linear; 
+    }
+
+}
+/* ==============================================================================================================
+                                        Visible Nav Media Query
+============================================================================================================== */
+@media (max-width: 940px) {
+    nav{
+        .visible_navbar{
+            .nav_else_part{
+                .slab span{
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 1150px) {
+    nav{
+        .visible_navbar{
+            padding: 0 5rem;
+        }
+    }
+}
+
+@media (max-width: 640px) {
+    nav{
+        .visible_navbar{
+            .nav_else_part{
+                flex-direction: column;
+            }
+        }
+    }
+}
+
+@media (max-width: 500px) {
+    nav{
+        .visible_navbar{
+            justify-content: space-around;
+            padding: 0;
+            .nav_else_part{
+                display: none;
+            }
+        }
+    }
+}
+/* ==============================================================================================================
+                                        Hidden Nav Active
+============================================================================================================== */
+@media (max-width: 1150px) {
+    nav{
+        .hidden_nav{
+            .hidden_nav_container{
+                padding: 5rem;
+                
+                .right{
+                    .nav_op_data{
+                        p{
+                            font-size: 2rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media (max-width: 810px) {
+    nav{
+        .hidden_nav{
+            .hidden_nav_container{
+                justify-content: flex-start;
+                flex-direction: column;
+                gap: 25px;
+                .left{
+                    flex-direction: row;
+                    flex-wrap: wrap;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 710px) {
+    nav.active{
+        height: 85rem;
+        max-height: none;
+    }
+}
+@media (max-width: 570px) {
+    nav.active{
+        height: 105rem;
+    }
+}
+@media (max-width: 490px) {
+    nav.active{
+        height: 160rem;
+
+        .hidden_nav{
+            .hidden_nav_container{
+                .left{
+                    align-items: center;
+                    flex-direction: column;
+                }
+            }
+        }
+        
+    }
+}
